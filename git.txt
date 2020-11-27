@@ -1,1 +1,45 @@
 Meu manual pessoal de git
+
+- Listar branchs de um projeto
+git branch
+
+
+- Trocar de branch
+git checkout <nome da branch>
+
+
+- Criar nova branch
+git branch -m <tipo>/<titulo>
+
+
+- Verificar status das alterações
+git status
+
+
+- Adicionar arquivos
+git add .
+
+
+- Remover um arquivo
+git restore <caminho do arquivo>
+
+
+- Realizar um commit
+git commit -m "<titulo>"
+
+
+- Enviar um commit para uma branch especifica
+git push origin <nome da branch>
+
+
+- Corrigir conflitos entre branchs
+git checkout <nome da branch principal>
+git pull
+git checkout <nome da minha branch>
+git merge <nome da branch principal>
+
+
+- Unir commits em um só
+git reset --soft HEAD~<quantidade de commits>
+git commit -m “<titulo do commit>”
+git push -f origin <nome da minha branch>
