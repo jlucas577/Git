@@ -42,4 +42,27 @@ git merge <nome da branch principal>
 - Unir commits em um só
 git reset --soft HEAD~<quantidade de commits>
 git commit -m “<titulo do commit>”
-git push -f origin <nome da minha branch>
+git push -f origin <nome da branch>
+
+- Fazer cópia de uma branch
+- git checkout -b <nome da branch>-backup
+
+- Remover arquivos de um commit (Caso não tenha merge)
+git reset —soft HEAD~<quantidade de commits>
+git status
+git restore <arquivo>
+git status
+git commit -m “<commit>”
+git status
+gitk
+
+- Puxar conflitos
+git checkout -b <nome da branch>-backup
+git checkout <nome da branch principal>
+git pull origin <nome da branch principal>
+git checkout <nome da branch>
+git rebase development <nome da branch principal>
+git status
+git add .
+git rebase --continue
+git push -f origin <nome da branch>
