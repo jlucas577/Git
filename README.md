@@ -1,4 +1,4 @@
-# Meu manual pessoal de uso do GIT
+# Meu manual de uso pessoal do GIT
 Utilizo essse repositório para anotar os principais comandos do git que tem me gerado dúvidas e dificuldades. Espero ajudar alguém através desses simples comandos (:
 
 #### Conteúdo
