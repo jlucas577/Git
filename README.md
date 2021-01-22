@@ -1,6 +1,21 @@
 # Meu manual pessoal de uso do GIT
 Utilizo essse repositório para anotar os principais comandos do git que tem me gerado dúvidas e dificuldades. Espero ajudar alguém através desses simples comandos (:
 
+#### Conteúdo
+- Listar branchs de um projeto
+- Trocar de branch
+- Criar nova branch
+- Verificar status das alterações
+- Adicionar arquivos
+- Remover um arquivo
+- Realizar um commit
+- Enviar um commit para uma branch especifica
+- Corrigir conflitos entre branchs
+- Unir commits em um só
+- Fazer cópia de uma branch
+- Remover arquivos de um commit
+- Puxar conflitos
+
 #### Listar branchs de um projeto
 ```sh
 git branch
