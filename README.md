@@ -1,5 +1,5 @@
 # Meu manual pessoal de uso do GIT
-Repository so that I can learn, understand and test the main git commands.
+Utilizo essse repositório para anotar os principais comandos do git que tem me gerado dúvidas e dificuldades. Espero ajudar alguém através desses simples comandos (:
 
 #### Listar branchs de um projeto
 ```sh
