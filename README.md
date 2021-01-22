@@ -86,7 +86,8 @@ git push -f origin <nome da branch>
 #### Fazer cópia de uma branch
 Copiar a branch atual para uma nova, geralmente utilizado para realizar backups das alteraçoes.
 ```sh
-git checkout -b <nome da branch>-backup
+git checkout -b <nome da branch>-backup (Melhor maneira para se fazer o backup de uma branch e manter sua referência)
+git checkout -b <novo nome da branch> (Copiando branch atual e dando um novo nome para ela)
 ```
 
 #### Remover arquivos de um commit
