@@ -11,7 +11,8 @@ Utilizo essse repositório para anotar os principais comandos do git que tem me 
 - Realizar um commit
 - Enviar um commit para uma branch especifica
 - Corrigir conflitos entre branchs
-- Unir commits em um só
+- Unir commits em um só (Método para branchs sem Merge)
+- Unir commits em um só (Método para branchs com Merge)
 - Fazer cópia de uma branch
 - Remover arquivos de um commit
 - Puxar conflitos
@@ -75,7 +76,15 @@ git checkout <nome da minha branch>
 git merge <nome da branch principal>
 ```
 
-#### Unir commits em um só
+#### Unir commits em um só (Método para branchs sem Merge)
+Unir diversos commits em um só.
+```sh
+git reset --soft HEAD~<quantidade de commits>
+git commit -m “<titulo do commit>”
+git push -f origin <nome da branch>
+```
+
+#### Unir commits em um só (Método para branchs com Merge)
 Unir diversos commits em um só.
 ```sh
 git reset --soft HEAD~<quantidade de commits>
@@ -109,7 +118,7 @@ git checkout -b <nome da branch>-backup
 git checkout <nome da branch principal>
 git pull origin <nome da branch principal>
 git checkout <nome da branch>
-git rebase development <nome da branch principal>
+git rebase <nome da branch principal>
 git status
 git add .
 git rebase --continue
