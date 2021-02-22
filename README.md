@@ -72,7 +72,7 @@ Corrigir conflitos de arquivos em uma branch.
 ```sh
 git checkout <nome da branch principal>
 git pull
-git checkout <nome da minha branch>
+git checkout <nome da branch>
 git merge <nome da branch principal>
 ```
 
@@ -87,8 +87,16 @@ git push -f origin <nome da branch>
 #### Unir commits em um só (Método para branchs com Merge)
 Unir diversos commits em um só.
 ```sh
-git reset --soft HEAD~<quantidade de commits>
-git commit -m “<titulo do commit>”
+git checkout -b <nome da branch>-backup
+git reset —soft HEAD-<numero de commits>
+git commit -m “<alterações realizadas>”
+git checkout <nome da branch principal>
+git pull
+git checkout <nome da branch>
+git rebase <nome da branch principal>
+git status
+git add .
+git rebase --continue
 git push -f origin <nome da branch>
 ```
 
@@ -106,7 +114,7 @@ git reset —soft HEAD~<quantidade de commits>
 git status
 git restore <arquivo>
 git status
-git commit -m “<commit>”
+git commit -m “<alterações realizadas>”
 git status
 gitk
 ```
