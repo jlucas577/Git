@@ -119,8 +119,8 @@ git status
 gitk
 ```
 
-#### Puxar conflitos
-Puxar conflitos da branch para que possam ser resolvidos.
+#### Puxar e resolver conflitos
+Puxar e resolver conflitos da branch, sem que seja necessário dar um merge.
 ```sh
 git checkout -b <nome da branch>-backup
 git checkout <nome da branch principal>
