@@ -1,26 +1,35 @@
 # Meu manual de uso pessoal do GIT
-Utilizo essse repositório para anotar os principais comandos do git que tem me gerado dúvidas e dificuldades. Espero ajudar alguém através desses simples comandos (:
 
-[Link to Header](###criar-nova-branch)
+Esse reposítorio serve como uma base de conhecimentos e experiencias que já vivo, guardo aqui desde comandos básicos até comandos um poucos mais avançados, que por muito tempo foram grandes impedimentos para o meu desenvolvimento, e espero de alguma forma contribuir com o seu desenvolvimento através desse materal.
+
+![Seja um Ninja do GIT](https://blog.da2k.com.br/uploads/2015/07/banner-git-e-github-ninja.jpg)
 
 #### Conteúdo
-- Listar branchs de um projeto
-- Trocar de branch
-- Criar nova branch
-- Verificar status das alterações
-- Adicionar arquivos
-- Remover um arquivo
-- Realizar um commit
-- Enviar um commit para uma branch especifica
-- Corrigir conflitos entre branchs
-- Unir commits em um só (Método para branchs sem Merge)
-- Unir commits em um só (Método para branchs com Merge)
-- Fazer cópia de uma branch
-- Remover arquivos de um commit
-- Puxar conflitos
+- [Criar nova branch](#criar-nova-branch)
+- [Listar branchs de um projeto](#criar-nova-branch)
+- [Trocar de branch](#criar-nova-branch)
+- [Adicionar arquivos](#criar-nova-branch)
+- [Remover um arquivo](#criar-nova-branch)
+- [Realizar um commit](#criar-nova-branch)
+- [Verificar status das alterações](#criar-nova-branch)
+- [Enviar um commit para uma branch especifica](#criar-nova-branch)
+- [Remover arquivos de um commit](#criar-nova-branch)
+- [Fazer cópia de uma branch](#criar-nova-branch)
+- [Corrigir conflitos entre branchs](#criar-nova-branch)
+- [Unir commits em um só (Método para branchs sem Merge)](#criar-nova-branch)
+- [Unir commits em um só (Método para branchs com Merge)](#criar-nova-branch)
+- [Puxar conflitos](#criar-nova-branch)
+- [Atualizar branch atual](#atualizar-branch-atual)
+- [Atualizar repositório completo](#atualizar-repositorio-completo)
+
+#### Criar nova branch
+Cria uma nova branch local.
+```sh
+git branch -m <tipo>/<titulo>
+```
 
 #### Listar branchs de um projeto
-Listar todas as branchs de um determinado projeto que estão disponíveis no seu ambiente local.
+Lista todas as branchs de um determinado projeto que estão disponíveis no seu ambiente local.
 ```sh
 git branch
 ```
@@ -31,46 +40,59 @@ Troca de branch dentro de um projeto.
 git checkout <nome da branch>
 ```
 
-#### Criar nova branch
-Criaçao de uma nova branch local.
-```sh
-git branch -m <tipo>/<titulo>
-```
-
-#### Verificar status das alterações
-Comando para verificar o status das alterações realizadas nos arquivos.
-```sh
-git status
-```
-
 #### Adicionar arquivos
-Adicionar alterações realizadas nos arquivos ao commit que sera realizado.
+Adiciona alterações realizadas nos arquivos ao commit que será enviado.
 ```sh
 git add . (Adicionar todos os arquivos modificados)
 git add <caminho do arquivo> (Adicionar um arquivo específico)
 ```
 
 #### Remover um arquivo
-Remover as alterações realizadas nos arquivos, e evitar que sejam enviadas no commit.
+Remove as alterações realizadas nos arquivos, e evita que sejam enviadas no commit.
 ```sh
 git restore . (Remover todos os arquivos modificados)
 git restore <caminho do arquivo> (Remover um arquivo específico)
 ```
 
 #### Realizar um commit
-Salvar as alteracões realizadas no repositório local. Uma dica importante e sempre descrever o maior número de detalhes possíveis no título do seu commit, para facilitar o entendimento do que foi realizado.
+Salva as alteracões realizadas no repositório local. Uma dica importante e sempre descrever o maior número de detalhes possíveis no título do seu commit, para facilitar o entendimento do que foi desenvolvido.
 ```sh
 git commit -m "<titulo>"
 ```
 
+#### Verificar status das alterações
+Verifica o status das alterações realizadas nos arquivos.
+```sh
+git status
+```
+
 #### Enviar um commit para uma branch especifica
-Enviar as alteracões realizadas do repositório local para o repositório remoto.
+Envia as alterações realizadas, do repositório local para o repositório remoto.
 ```sh
 git push origin <nome da branch>
 ```
 
+#### Remover arquivos de um commit
+Remove arquivos enviados no commit de uma branch remota, apenas caso não tenha merge.
+```sh
+git reset —soft HEAD~<quantidade de commits>
+git status
+git restore <arquivo>
+git status
+git commit -m “<alterações realizadas>”
+git status
+gitk
+```
+
+#### Fazer cópia de uma branch
+Cópia a branch atual para uma nova, geralmente utilizado para realizar backups das alterações.
+```sh
+git checkout -b <nome da branch>-backup (Melhor maneira para se fazer o backup de uma branch e manter sua referência)
+git checkout -b <novo nome da branch> (Copiando branch atual e dando um novo nome para ela)
+```
+
 #### Corrigir conflitos entre branchs
-Corrigir conflitos de arquivos em uma branch.
+Corrige conflitos de arquivos em uma branch.
 ```sh
 git checkout <nome da branch principal>
 git pull
@@ -79,7 +101,7 @@ git merge <nome da branch principal>
 ```
 
 #### Unir commits em um só (Método para branchs sem Merge)
-Unir diversos commits em um só.
+Uni diversos commits em um só.
 ```sh
 git reset --soft HEAD~<quantidade de commits>
 git commit -m “<titulo do commit>”
@@ -87,7 +109,7 @@ git push -f origin <nome da branch>
 ```
 
 #### Unir commits em um só (Método para branchs com Merge)
-Unir diversos commits em um só.
+Uni diversos commits em um só.
 ```sh
 git checkout -b <nome da branch>-backup
 git reset —soft HEAD-<numero de commits>
@@ -102,27 +124,8 @@ git rebase --continue
 git push -f origin <nome da branch>
 ```
 
-#### Fazer cópia de uma branch
-Copiar a branch atual para uma nova, geralmente utilizado para realizar backups das alteraçoes.
-```sh
-git checkout -b <nome da branch>-backup (Melhor maneira para se fazer o backup de uma branch e manter sua referência)
-git checkout -b <novo nome da branch> (Copiando branch atual e dando um novo nome para ela)
-```
-
-#### Remover arquivos de um commit
-Remover arquivos enviados no commit de uma branch remota, apenas caso não tenha merge.
-```sh
-git reset —soft HEAD~<quantidade de commits>
-git status
-git restore <arquivo>
-git status
-git commit -m “<alterações realizadas>”
-git status
-gitk
-```
-
 #### Puxar e resolver conflitos
-Puxar e resolver conflitos da branch, sem que seja necessário dar um merge.
+Puxa conflitos da branch, e permite que sejam resolvidos, sem que seja necessário dar um merge.
 ```sh
 git checkout -b <nome da branch>-backup
 git checkout <nome da branch principal>
@@ -133,4 +136,16 @@ git status
 git add .
 git rebase --continue
 git push -f origin <nome da branch>
+```
+
+### Atualizar branch atual
+Atualiza branch em que você está trabalhando no momento.
+```sh
+git pull
+```
+
+### Atualizar repositório completo
+Atualiza todas as branchs do repositório que você está utilizando.
+```sh
+git remote update
 ```
