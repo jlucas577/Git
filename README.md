@@ -1,6 +1,8 @@
 # Meu manual de uso pessoal do GIT
 Utilizo essse repositório para anotar os principais comandos do git que tem me gerado dúvidas e dificuldades. Espero ajudar alguém através desses simples comandos (:
 
+[Link to Header](###criar-nova-branch)
+
 #### Conteúdo
 - Listar branchs de um projeto
 - Trocar de branch
