@@ -10,7 +10,9 @@ Esse reposítorio serve como uma base de conhecimentos e experiencias que já vi
 - [Trocar de branch](#trocar-de-branch)
 - [Adicionar arquivos](#adicionar-arquivos)
 - [Remover um arquivo](#remover-um-arquivo)
+- [Remover arquivos não rastreados](#remover-arquivos-nao-rastreados)
 - [Realizar um commit](#realizar-um-commit)
+- [Realizar um commit em branco](#realizar-um-commit-em-branco)
 - [Verificar status das alterações](#verificar-status-das-alteracoes)
 - [Enviar um commit para uma branch especifica](#enviar-um-commit-para-uma-branch-especifica)
 - [Remover arquivos de um commit](#remover-arquivos-de-um-commit)
@@ -54,12 +56,23 @@ git restore . (Remover todos os arquivos modificados)
 git restore <caminho do arquivo> (Remover um arquivo específico)
 ```
 
+#### Remover arquivos não rastreados
+Remove as alterações não rastreadas, e evita que sejam enviadas no commit.
+```sh
+git clean -fd
+```
+
 #### Realizar um commit
 Salva as alteracões realizadas no repositório local. Uma dica importante e sempre descrever o maior número de detalhes possíveis no título do seu commit, para facilitar o entendimento do que foi desenvolvido.
 ```sh
 git commit -m "<titulo>"
 ```
 
+#### Realizar um commit em branco
+Cria um commit em branco, sem alterações.
+```sh
+git commit --allow-empty -m "<titulo>"
+```
 #### Verificar status das alterações
 Verifica o status das alterações realizadas nos arquivos.
 ```sh
