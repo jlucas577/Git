@@ -23,6 +23,8 @@ Esse reposítorio serve como uma base de conhecimentos e experiencias que já vi
 - [Puxar conflitos](#puxar-conflitos)
 - [Atualizar branch atual](#atualizar-branch-atual)
 - [Atualizar repositório completo](#atualizar-repositorio-completo)
+- [Arquivar alterações](#arquivar-alteracoes)
+- [Desarquivar alterações](#desarquivar-alteracoes)
 
 #### Criar nova branch
 Cria uma nova branch local.
@@ -161,4 +163,18 @@ git pull
 Atualiza todas as branchs do repositório que você está utilizando.
 ```sh
 git remote update
+```
+
+### Arquiva alterações
+Arquiva as alterações que você fez durante um determinado período, deste que não estejam adicionadas a algum commit, possibilitando que você possa trabalhar em outra coisa, e depois voltar e fazer a reaplicação mais tarde.
+
+O stash se torna útil em um contexto onde, você precisa alterar com rapidez para trabalhar em outra coisa, mas está no meio de alguma alteração de código e não está pronto para fazer um commit.
+```sh
+git stash
+```
+
+### Desarquiva alterações
+Desarquiva as alterações, fazendo com que as alterações arquivadas retornem para a área de trabalho.
+```sh
+git stash apply
 ```
