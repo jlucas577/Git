@@ -22,7 +22,7 @@ Esse reposítorio serve como uma base de conhecimentos e experiências que já p
 - [Unir commits em um só (Método para branchs com Merge)](#criar-nova-branch)
 - [Puxar conflitos](#puxar-conflitos)
 - [Atualizar branch atual](#atualizar-branch-atual)
-- [Atualizar repositório completo](#atualizar-repositorio-completo)
+- [Atualizar repositório completo](#atualizar-repositório-completo)
 - [Arquivar alterações](#arquivar-alterações)
 - [Desarquivar alterações](#desarquivar-alterações)
 
