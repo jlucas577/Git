@@ -1,6 +1,6 @@
-# Meu manual de uso pessoal do GIT
+# Seja um Ninja do GIT!
 
-Esse reposítorio serve como uma base de conhecimentos e experiencias que já vivo, guardo aqui desde comandos básicos até comandos um poucos mais avançados, que por muito tempo foram grandes impedimentos para o meu desenvolvimento, e espero de alguma forma contribuir com o seu desenvolvimento através desse materal.
+Esse reposítorio serve como uma base de conhecimentos e experiências que já presenciei, guardo aqui desde comandos básicos até comandos um poucos mais elaborados, que por muito tempo foram grandes impedimentos para o meu desenvolvimento, espero de alguma forma contribuir com o seu desenvolvimento pessoal/profissional através desse materal.
 
 ![Seja um Ninja do GIT](https://blog.da2k.com.br/uploads/2015/07/banner-git-e-github-ninja.jpg)
 
@@ -23,8 +23,8 @@ Esse reposítorio serve como uma base de conhecimentos e experiencias que já vi
 - [Puxar conflitos](#puxar-conflitos)
 - [Atualizar branch atual](#atualizar-branch-atual)
 - [Atualizar repositório completo](#atualizar-repositorio-completo)
-- [Arquivar alterações](#arquivar-alteracoes)
-- [Desarquivar alterações](#desarquivar-alteracoes)
+- [Arquivar alterações](#arquivar-alterações)
+- [Desarquivar alterações](#desarquivar-alterações)
 
 #### Criar nova branch
 Cria uma nova branch local.
