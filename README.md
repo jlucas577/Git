@@ -4,6 +4,8 @@ Esse reposítorio serve como uma base de conhecimentos e experiências que já p
 
 ![Seja um Ninja do GIT](https://blog.da2k.com.br/uploads/2015/07/banner-git-e-github-ninja.jpg)
 
+Este guia cobre o dia a dia com git. Se você já domina o básico e quer ir além, confira o [guia avançado](AVANCADO.md).
+
 #### Conteúdo
 - [Criar nova branch](#criar-nova-branch)
 - [Listar branchs de um projeto](#listar-branchs-de-um-projeto)
@@ -122,6 +124,7 @@ git reset --soft HEAD~<quantidade de commits>
 git commit -m "<titulo do commit>"
 git push -f origin <nome da branch>
 ```
+> 💡 `push -f` sobrescreve a branch remota sem checar se alguém enviou commits novos nela. Uma alternativa mais segura é `git push --force-with-lease origin <nome da branch>`, que cancela o push se a branch remota mudou desde a última vez que você a atualizou localmente. Veja mais no [guia avançado](AVANCADO.md#enviar-alterações-forçadas-com-segurança).
 
 #### Unir commits em um só (Método para branchs com Merge)
 Uni diversos commits em um só.
@@ -138,6 +141,7 @@ git add .
 git rebase --continue
 git push -f origin <nome da branch>
 ```
+> 💡 Assim como no método anterior, prefira `git push --force-with-lease origin <nome da branch>` quando quiser mais segurança contra sobrescrever commits que outra pessoa tenha enviado.
 
 #### Puxar e resolver conflitos
 Puxa conflitos da branch, e permite que sejam resolvidos, sem que seja necessário dar um merge.
