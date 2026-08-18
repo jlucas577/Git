@@ -10,17 +10,17 @@ Esse reposítorio serve como uma base de conhecimentos e experiências que já p
 - [Trocar de branch](#trocar-de-branch)
 - [Adicionar arquivos](#adicionar-arquivos)
 - [Remover um arquivo](#remover-um-arquivo)
-- [Remover arquivos não rastreados](#remover-arquivos-nao-rastreados)
+- [Remover arquivos não rastreados](#remover-arquivos-não-rastreados)
 - [Realizar um commit](#realizar-um-commit)
 - [Realizar um commit em branco](#realizar-um-commit-em-branco)
-- [Verificar status das alterações](#verificar-status-das-alteracoes)
+- [Verificar status das alterações](#verificar-status-das-alterações)
 - [Enviar um commit para uma branch especifica](#enviar-um-commit-para-uma-branch-especifica)
 - [Remover arquivos de um commit](#remover-arquivos-de-um-commit)
-- [Fazer cópia de uma branch](#fazer-copia-de-uma-branch)
+- [Fazer cópia de uma branch](#fazer-cópia-de-uma-branch)
 - [Corrigir conflitos entre branchs](#corrigir-conflitos-entre-branchs)
-- [Unir commits em um só (Método para branchs sem Merge)](#criar-nova-branch)
-- [Unir commits em um só (Método para branchs com Merge)](#criar-nova-branch)
-- [Puxar conflitos](#puxar-conflitos)
+- [Unir commits em um só (Método para branchs sem Merge)](#unir-commits-em-um-só-método-para-branchs-sem-merge)
+- [Unir commits em um só (Método para branchs com Merge)](#unir-commits-em-um-só-método-para-branchs-com-merge)
+- [Puxar e resolver conflitos](#puxar-e-resolver-conflitos)
 - [Atualizar branch atual](#atualizar-branch-atual)
 - [Atualizar repositório completo](#atualizar-repositório-completo)
 - [Arquivar alterações](#arquivar-alterações)
@@ -29,7 +29,7 @@ Esse reposítorio serve como uma base de conhecimentos e experiências que já p
 #### Criar nova branch
 Cria uma nova branch local.
 ```sh
-git branch -m <tipo>/<titulo>
+git branch <tipo>/<titulo>
 ```
 
 #### Listar branchs de um projeto
@@ -90,11 +90,11 @@ git push origin <nome da branch>
 #### Remover arquivos de um commit
 Remove arquivos enviados no commit de uma branch remota, apenas caso não tenha merge.
 ```sh
-git reset —soft HEAD~<quantidade de commits>
+git reset --soft HEAD~<quantidade de commits>
 git status
 git restore <arquivo>
 git status
-git commit -m “<alterações realizadas>”
+git commit -m "<alterações realizadas>"
 git status
 gitk
 ```
@@ -119,7 +119,7 @@ git merge <nome da branch principal>
 Uni diversos commits em um só.
 ```sh
 git reset --soft HEAD~<quantidade de commits>
-git commit -m “<titulo do commit>”
+git commit -m "<titulo do commit>"
 git push -f origin <nome da branch>
 ```
 
@@ -127,8 +127,8 @@ git push -f origin <nome da branch>
 Uni diversos commits em um só.
 ```sh
 git checkout -b <nome da branch>-backup
-git reset —soft HEAD-<numero de commits>
-git commit -m “<alterações realizadas>”
+git reset --soft HEAD~<numero de commits>
+git commit -m "<alterações realizadas>"
 git checkout <nome da branch principal>
 git pull
 git checkout <nome da branch>
@@ -153,19 +153,19 @@ git rebase --continue
 git push -f origin <nome da branch>
 ```
 
-### Atualizar branch atual
+#### Atualizar branch atual
 Atualiza branch em que você está trabalhando no momento.
 ```sh
 git pull
 ```
 
-### Atualizar repositório completo
+#### Atualizar repositório completo
 Atualiza todas as branchs do repositório que você está utilizando.
 ```sh
 git remote update
 ```
 
-### Arquiva alterações
+#### Arquivar alterações
 Arquiva as alterações que você fez durante um determinado período, deste que não estejam adicionadas a algum commit, possibilitando que você possa trabalhar em outra coisa, e depois voltar e fazer a reaplicação mais tarde.
 
 O stash se torna útil em um contexto onde, você precisa alterar com rapidez para trabalhar em outra coisa, mas está no meio de alguma alteração de código e não está pronto para fazer um commit.
@@ -173,7 +173,7 @@ O stash se torna útil em um contexto onde, você precisa alterar com rapidez pa
 git stash
 ```
 
-### Desarquiva alterações
+#### Desarquivar alterações
 Desarquiva as alterações, fazendo com que as alterações arquivadas retornem para a área de trabalho.
 ```sh
 git stash apply
